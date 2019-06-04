@@ -1,0 +1,125 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑";
+}
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+  display: block;
+}
+.center {
+  width: 960px;
+  margin: 0 auto;
+}
+header {
+  min-width: 960px;
+  background: #333;
+}
+header .center {
+  height: 67px;
+  overflow: hidden;
+}
+header .center .logo {
+  width: 143px;
+  float: left;
+  margin-right: 20px;
+}
+header .center .logo a {
+  display: block;
+}
+header .center .logo a img {
+  margin-left: 4px;
+  margin-top: 17px;
+}
+header .center .web-name {
+  box-sizing: border-box;
+  color: white;
+  font-size: 20px;
+  line-height: 40px;
+  font-family: "arial";
+  padding-top: 14px;
+}
+header .center .web-name a {
+  color: white;
+}
+.neirong {
+  background: #f2f2f2;
+}
+.neirong .center .biaodan {
+  background: #fff;
+  padding: 30px 270px;
+  font-size: 14px;
+  color: #333;
+}
+.neirong .center .biaodan dl {
+  height: 44px;
+  width: 420px;
+  overflow: hidden;
+  margin: 20px 0;
+  border: 1px solid #d9d9d9;
+  border-radius: 22px;
+}
+.neirong .center .biaodan dl dt {
+  width: 123px;
+  height: 44px;
+  border-right: 1px solid #d9d9d9;
+  line-height: 44px;
+  text-align: center;
+  float: left;
+}
+.neirong .center .biaodan dl dt select {
+  border: none;
+  width: 80%;
+  font-size: 16px;
+  margin-left: 10px;
+  outline: none;
+  height: 25px;
+}
+.neirong .center .biaodan dl dd {
+  float: left;
+  line-height: 44px;
+  text-align: center;
+}
+.neirong .center .biaodan dl dd select {
+  border: none;
+  width: 250px;
+  font-size: 16px;
+  margin-left: 15px;
+  outline: none;
+  height: 25px;
+}
+.neirong .center .biaodan dl dd input {
+  border: none;
+  margin-left: 15px;
+  font-size: 16px;
+  outline: none;
+  height: 25px;
+}
+.neirong .center .biaodan .riqi select {
+  width: 60px;
+}
+.neirong .center .biaodan .btn {
+  display: block;
+  margin: 30px auto;
+  width: 200px;
+  height: 40px;
+  background: #b40707;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}

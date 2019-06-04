@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>华为首页</title>
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/iconfont/iconfont.css">
+    <script src="./src/js/jquery.js"></script>
+    <script src="./src/js/lunbo.js"></script>
+    <script src="./src/js/cookie.js"></script>
+    <script src="./src/js/denglu.js"></script>
+
+    <script>
+        $(function() {
+            $('.banner').lunbo();
+        })
+    </script>
+    <script>
+        $(function() {
+            $.ajax({
+                type: "get",
+                url: "./src/lip/getwupin.php",
+                dataType: "json",
+                success: function(response) {
+                    var box = $(".xilie>.center");
+                    var str = '';
+                    response.forEach(function(elm, i) {
+                        var pic = JSON.parse(elm.img)
+                        str = `   
+                        <div class="xilie1">
+                            <a href="./src/html/xiangqing.html?id=${elm.id}"><img src="${pic[0].src1}" alt=""></a>
+                        </div>`;
+                        box.append(str);
+                    })
+                }
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="center clear">
+            <div class="top clear">
+                <ul class="left clear">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">华为商城</a></li>
+                    <li><a href="#">荣耀官网</a></li>
+                    <li><a href="#">花粉俱乐部</a></li>
+                    <li><a href="#">V码(优购码)</a></li>
+                    <li><a href="#">企业购</a></li>
+                    <li><a href="#">Select Region</a></li>
+                    <li>
+                        <a href="#">更多精彩</a>
+                        <ul class="erji gengduo">
+                            <li><a href="#">EMUI</a></li>
+                            <li><a href="#">应用市场</a></li>
+                            <li><a href="#">华为终端云空间</a></li>
+                            <li><a href="#">开发者联盟</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="right clear">
+                    <li><a id="denglu" href="./src/html/login.html">请登录</a>&nbsp;&nbsp;<a href="./src/html/zhuce.html">注册</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li>
+                        <a href="#">客户服务</a>
+                        <ul class="erji service">
+                            <li><a href="#">服务中心</a></li>
+                            <li><a href="#">联系客服</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">网站导航</a>
+                        <div class="erji sitemap">
+                            <dl>
+                                <dt>频道</dt>
+                                <dd><a href="#">华为专区</a></dd>
+                                <dd><a href="#">企业购</a></dd>
+                                <dd><a href="#">荣耀</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>产品</dt>
+                                <dd><a href="#">手机</a></dd>
+                                <dd><a href="#">平板&笔记本</a></dd>
+                                <dd><a href="#">智能穿戴</a></dd>
+                                <dd><a href="#">智能家居</a></dd>
+                                <dd><a href="#">通用配件</a></dd>
+                                <dd><a href="#">专属配件</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>增值服务</dt>
+                                <dd><a href="#">以旧换新</a></dd>
+                                <dd><a href="#">补够保障</a></dd>
+                                <dd><a href="#">礼品包装</a></dd>
+                                <dd><a href="#">一口价换电池</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>会员</dt>
+                                <dd><a href="#">会员频道</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">手机版</a>
+                        <ul class="erji code">
+                            <li>
+                                <img src="./src/img/1.png" alt="">
+                                <div>
+                                    <h2>华为商城App</h2>
+                                    <p>
+                                        新人专享好礼<br> 最高50000积分
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./src/img/2.jpg" alt="">
+                                <div>
+                                    <h2>华为商城公众号</h2>
+                                    <p>
+                                        微信扫一扫
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="./src/img/3.jpg" alt="">
+                                <div>
+                                    <h2>
+                                        微信小程序
+                                    </h2>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a id="shopcar" href="./src/html/shopcar.html">购物车(<span id="shop-num">0</span>)</a></li>
+                </ul>
+            </div>
+            <div class="nav clear">
+                <div class="center clear">
+                    <div class="left clear">
+                        <div class="logo">
+                            <a href="index.html"><img src="./src/img/logo.png" alt="logo" title="logo"></a>
+                        </div>
+                        <ul class="list">
+                            <li class="img">
+                                <a href="#"><img src="./src/img/huawei.png" alt=""></a>
+                            </li>
+                            <li class="img">
+                                <a href="#"><img src="./src/img/rongyao.png" alt=""></a>
+                            </li>
+                            <li class=""><a href="#">华为P30</a></li>
+                            <li><a href="#">荣耀20</a></li>
+                            <li><a href="#">粉丝会员日</a></li>
+                            <li><a href="#">荣耀V20</a></li>
+                        </ul>
+                    </div>
+                    <div class="right clear">
+                        <div class="search">
+                            <input type="text" name="search" id="search" placeholder="HUAWEI P30  荣耀20">
+                            <button class="iconfont icon-sousuo"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="imgbox">
+            <a href="#"><img src="./src/img/banner1.jpg" alt=""></a>
+            <a href="#"><img src="./src/img/banner2.jpg" alt=""></a>
+            <a href="#"><img src="./src/img/banner3.jpg" alt=""></a>
+            <a href="#"><img src="./src/img/banner4.jpg" alt=""></a>
+            <a href="#"><img src="./src/img/banner5.jpg" alt=""></a>
+            <a href="#"><img src="./src/img/banner6.jpg" alt=""></a>
+            <a href="#"><img src="./src/img/banner7.jpg" alt=""></a>
+            <a href="#"><img src="./src/img/banner8.jpg" alt=""></a>
+        </div>
+        <span>&lt;</span>
+        <span>&gt;</span>
+        <div class="center">
+            <div class="listbanner">
+                <ul>
+                    <li>
+                        <div class="bt">
+                            <h2>手机</h2>
+                            <span>荣耀</span>
+                            <span>HUAWEI P系列</span>
+                        </div>
+                        <div class="nr">
+                            <ul class="list1">
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bt">
+                            <h2>手机</h2>
+                            <span>荣耀</span>
+                            <span>HUAWEI P系列</span>
+                        </div>
+                        <div class="nr">
+                            <ul class="list1">
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bt">
+                            <h2>手机</h2>
+                            <span>荣耀</span>
+                            <span>HUAWEI P系列</span>
+                        </div>
+                        <div class="nr">
+                            <ul class="list1">
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bt">
+                            <h2>手机</h2>
+                            <span>荣耀</span>
+                            <span>HUAWEI P系列</span>
+                        </div>
+                        <div class="nr">
+                            <ul class="list1">
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bt">
+                            <h2>手机</h2>
+                            <span>荣耀</span>
+                            <span>HUAWEI P系列</span>
+                        </div>
+                        <div class="nr">
+                            <ul class="list1">
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="bt">
+                            <h2>手机</h2>
+                            <span>荣耀</span>
+                            <span>HUAWEI P系列</span>
+                        </div>
+                        <div class="nr">
+                            <ul class="list1">
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="./src/img/ry.png" alt="">
+                                        <span>荣耀</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="xilie">
+        <div class="center">
+            <!-- <div class="xilie1">
+                <a href="./src/html/xiangqing.html"><img src="./src/img/xilie1.jpg" alt=""></a>
+            </div>
+            <div class="xilie2">
+                <a href="./src/html/xiangqing.html"><img src="./src/img/xilie2.jpg" alt=""></a>
+            </div>
+            <div class="xilie3">
+                <a href="./src/html/xiangqing.html"><img src="./src/img/xilie3.jpg" alt=""></a>
+            </div>
+            <div>
+                <a href="./src/html/xiangqing.html"><img src="./src/img/xilie4.png" alt=""></a>
+            </div> -->
+
+        </div>
+    </div>
+
+    <div class="hot">
+        <div class="center clear">
+            <h2>热卖单品</h2>
+            <div class="hotlist">
+                <div class="left">
+                    <a href="#"><img data-lazy-src="./src/img/hotlist.jpg" alt=""></a>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img data-lazy-src="./src/img/hotlist1.png" alt="">
+                                <span class="title">
+                                    华为荣耀
+                                </span>
+                                <span class="youhui">
+                                    最高优惠600元
+                                </span>
+                                <span class="pricebox">
+                                    ￥<em class="price">2688</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img data-lazy-src="./src/img/hotlist2.png" alt="">
+                                <span class="title">
+                                        华为荣耀
+                                    </span>
+                                <span class="youhui">
+                                        最高优惠600元
+                                    </span>
+                                <span class="pricebox">
+                                    ￥<em class="price">2688</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img data-lazy-src="./src/img/hotlist3.png" alt="">
+                                <span class="title">
+                                            华为荣耀
+                                        </span>
+                                <span class="youhui">
+                                            最高优惠600元
+                                        </span>
+                                <span class="pricebox">
+                                    ￥<em class="price">2688</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img data-lazy-src="./src/img/hotlist4.png" alt="">
+                                <span class="title">
+                                                华为荣耀
+                                            </span>
+                                <span class="youhui">
+                                                最高优惠600元
+                                            </span>
+                                <span class="pricebox">
+                                    ￥<em class="price">2688</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img data-lazy-src="./src/img/hotlist5.png" alt="">
+                                <span class="title">
+                                                    华为荣耀
+                                                </span>
+                                <span class="youhui">
+                                                    最高优惠600元
+                                                </span>
+                                <span class="pricebox">
+                                    ￥<em class="price">2688</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img data-lazy-src="./src/img/hotlist6.png" alt="">
+                                <span class="title">
+                                                        华为荣耀
+                                                    </span>
+                                <span class="youhui">
+                                                        最高优惠600元
+                                                    </span>
+                                <span class="pricebox">
+                                    ￥<em class="price">2688</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img data-lazy-src="./src/img/hotlist7.png" alt="">
+                                <span class="title">
+                                                            华为荣耀
+                                                        </span>
+                                <span class="youhui">
+                                                            最高优惠600元
+                                                        </span>
+                                <span class="pricebox">
+                                    ￥<em class="price">2688</em>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img data-lazy-src="./src/img/hotlist8.png" alt="">
+                                <span class="title">
+                                    华为荣耀
+                                </span>
+                                <span class="youhui">
+                                    最高优惠600元
+                                </span>
+                                <span class="pricebox">
+                                 ￥<em class="price">2688</em>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="jingpin">
+        <div class="center">
+            <h2>精品推荐</h2>
+            <div class="btn1">&lt;</div>
+            <div class="btn2">&gt;</div>
+            <ul class="clear">
+                <li>
+                    <a href="#">
+                        <div class="pic">
+                            <img data-lazy-src="./src/img/jingpin1.png" alt="">
+                            <span>100元订金提前预定</span>
+                        </div>
+                        <span class="title">
+                            HUAWEI Matebook 13
+                        </span>
+                        <span class="pricebox">
+                            ￥<em class="price">5600</em>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="pic">
+                            <img data-lazy-src="./src/img/jingpin1.png" alt="">
+                            <span>100元订金提前预定</span>
+                        </div>
+                        <span class="title">
+                                HUAWEI Matebook 13
+                            </span>
+                        <span class="pricebox">
+                                ￥<em class="price">5600</em>
+                            </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="pic">
+                            <img data-lazy-src="./src/img/jingpin1.png" alt="">
+                            <span>100元订金提前预定</span>
+                        </div>
+                        <span class="title">
+                                    HUAWEI Matebook 13
+                                </span>
+                        <span class="pricebox">
+                                    ￥<em class="price">5600</em>
+                                </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="pic">
+                            <img data-lazy-src="./src/img/jingpin1.png" alt="">
+                            <span>100元订金提前预定</span>
+                        </div>
+                        <span class="title">
+                                        HUAWEI Matebook 13
+                                    </span>
+                        <span class="pricebox">
+                                        ￥<em class="price">5600</em>
+                                    </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="pic">
+                            <img data-lazy-src="./src/img/jingpin1.png" alt="">
+                            <span>100元订金提前预定</span>
+                        </div>
+                        <span class="title">
+                                            HUAWEI Matebook 13
+                                        </span>
+                        <span class="pricebox">
+                                            ￥<em class="price">5600</em>
+                                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="center">
+            <div class="kouhao">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i></i> 百强企业&nbsp;品质保证
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i></i> 七天退货&nbsp;15天换货
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i></i> 48元起免运费
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i></i> 1000家维修网点&nbsp;全国联保
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-footer">
+
+            </div>
+            <div class="bottom clear">
+                <div class="logo">
+                    <a href="#"><img src="./src/img/footerlogo.png" alt=""></a>
+                </div>
+                <div class="list">
+                    <ul class="clear">
+                        <li><a href="#">华为集团</a></li>
+                        <li><a href="#">华为CBG官网</a></li>
+                        <li><a href="#">荣耀官网</a></li>
+                        <li><a href="#">花粉俱乐部</a></li>
+                        <li><a href="#">华为应用市场</a></li>
+                        <li><a href="#">EMUI</a></li>
+                        <li><a href="#">华为终端云空间</a></li>
+                        <li><a href="#">开发者联盟</a></li>
+                        <li><a href="#">华为商城手机版</a></li>
+                        <li><a href="#">网站地图</a></li>
+                    </ul>
+                    <div class="beian">
+                        <span> <a href="#">隐私声明</a></span>
+                        <span> <a href="#">服务协议</a></span>
+                        <span><a href="#">COOKIES</a></span>
+                        <span>Copyright © 2012-2019 华为终端有限公司 版权所有</span>
+                        <span><a href="#">粤ICP备19015064号-4</a></span>
+                        <em>|</em>
+                        <span><a href="#">粤公网安备 44190002003939号</a></span>
+                        <em>|</em>
+                        <span>备案主体编号：44201919072182</span>
+                    </div>
+
+                </div>
+                <div class="pic">
+                    <a href="#"><img src="./src/img/renzheng1.jpg" alt=""></a>
+                    <a href="#"><img src="./src/img/renzheng2.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+    <script src="./src/js/EasyLazyload.min.js"></script>
+    <script>
+        lazyLoadInit({
+            coverColor: "white",
+            coverDiv: "<h1></h1>",
+            offsetBottom: 150,
+            offsetTopm: 150,
+            showTime: 1100,
+            onLoadBackEnd: function(i, e) {
+                console.log("onLoadBackEnd:" + i);
+            },
+            onLoadBackStart: function(i, e) {
+                console.log("onLoadBackStart:" + i);
+            }
+        });
+    </script>
+</body>
+
+</html>

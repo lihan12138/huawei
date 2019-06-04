@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/shopcar.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/denglu.js"></script>
+    <script>
+        $(function() {
+            var shop = cookie.get('shop');
+            // console.log(shop);
+            if (shop) {
+                shop = JSON.parse(shop);
+                var idList = shop.map(elm => elm.id).join();
+                var index = 0;
+                //  console.log(idList);
+                $.ajax({
+                    type: "get",
+                    url: "../lip/shopcar.php",
+                    data: {
+                        "idList": idList
+                    },
+                    dataType: "json",
+                    success: function(response) {
+                        var str = "";
+                        response.forEach(function(elm) {
+                            var pic = JSON.parse(elm.img);
+
+                            var arr = shop.filter((val, i) => {
+                                return val.id === elm.id;
+                            });
+                            // console.log(pic[1].src2)
+                            str = `
+                            <li>
+                                <div class="c-box">
+                                    <input type="checkbox" class="p1">
+                                </div>
+                                <div class="p-img">
+                                    <img src="${pic[1].src2}" alt="">
+                                </div>
+                                <div class="p-title">
+                                   ${elm.title}
+                                </div>
+                                <div class="p-num">
+                                    数量：<input type="number" value="${arr[0].num}" min="1" max="55">
+                                </div>
+                                <div class="p-price">
+                                    单价:${elm.price}
+                                </div>
+                                <div class="p-sum">
+                                    总价:<i>${elm.price*arr[0].num}</i>
+                                </div>
+                                <div class="del" index="${index++}"><a href="#">删除</a></div>
+                            </li>
+                            `;
+                            $('.list1').append(str)
+                        })
+                        $('.list1').on("click", ".del", function() {
+                            $(this).parent().remove();
+                            console.log(shop[$(this).attr("index")])
+                            shop.splice([$(this).attr("index")], 1);
+                            shop = JSON.stringify(shop);
+                            cookie.set("shop", shop);
+                        })
+                        $('.list1').on('click', ".p1", function() {
+
+                        })
+                    }
+                });
+            }
+
+        })
+    </script>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="center clear">
+            <div class="top clear">
+                <ul class="left clear">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">华为商城</a></li>
+                    <li><a href="#">荣耀官网</a></li>
+                    <li><a href="#">花粉俱乐部</a></li>
+                    <li><a href="#">V码(优购码)</a></li>
+                    <li><a href="#">企业购</a></li>
+                    <li><a href="#">Select Region</a></li>
+                    <li>
+                        <a href="#">更多精彩</a>
+                        <ul class="erji gengduo">
+                            <li><a href="#">EMUI</a></li>
+                            <li><a href="#">应用市场</a></li>
+                            <li><a href="#">华为终端云空间</a></li>
+                            <li><a href="#">开发者联盟</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="right clear">
+                    <li><a id="denglu" href="../html/login.html">请登录</a>&nbsp;&nbsp;<a href="#">注册</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li>
+                        <a href="#">客户服务</a>
+                        <ul class="erji service">
+                            <li><a href="#">服务中心</a></li>
+                            <li><a href="#">联系客服</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">网站导航</a>
+                        <div class="erji sitemap">
+                            <dl>
+                                <dt>频道</dt>
+                                <dd><a href="#">华为专区</a></dd>
+                                <dd><a href="#">企业购</a></dd>
+                                <dd><a href="#">荣耀</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>产品</dt>
+                                <dd><a href="#">手机</a></dd>
+                                <dd><a href="#">平板&笔记本</a></dd>
+                                <dd><a href="#">智能穿戴</a></dd>
+                                <dd><a href="#">智能家居</a></dd>
+                                <dd><a href="#">通用配件</a></dd>
+                                <dd><a href="#">专属配件</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>增值服务</dt>
+                                <dd><a href="#">以旧换新</a></dd>
+                                <dd><a href="#">补够保障</a></dd>
+                                <dd><a href="#">礼品包装</a></dd>
+                                <dd><a href="#">一口价换电池</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>会员</dt>
+                                <dd><a href="#">会员频道</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">手机版</a>
+                        <ul class="erji code">
+                            <li>
+                                <img src="../img/1.png" alt="">
+                                <div>
+                                    <h2>华为商城App</h2>
+                                    <p>
+                                        新人专享好礼<br> 最高50000积分
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../img/2.jpg" alt="">
+                                <div>
+                                    <h2>华为商城公众号</h2>
+                                    <p>
+                                        微信扫一扫
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../img/3.jpg" alt="">
+                                <div>
+                                    <h2>
+                                        微信小程序
+                                    </h2>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">购物车(<span id="shop-num">0</span>)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav clear">
+            <div class="center">
+                <div class="logo">
+                    <a href="../../index.html"><img src="../img/logo.png" alt=""></a>
+                </div>
+                <p>我的购物车</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="neirong">
+        <div class="center">
+            <ul class="list1">
+                <!-- <li>
+                    <div class="c-box">
+                        <input type="checkbox" id="p1">
+                    </div>
+                    <div class="p-img">
+                        <img src="../img/jingpin2.png" alt="">
+                    </div>
+                    <div class="p-title">
+                        Apple MacBook Pro 13.3英寸笔记本电脑 深空灰色 2018新款（四核八代i5 8G 256G固态硬盘 MR9Q2CH/A）
+                    </div>
+                    <div class="p-num">
+                        数量：<input type="number" value="1" min="1" max="55">
+                    </div>
+                    <div class="p-price">
+                        单价:9999.00
+                    </div>
+                    <div class="p-sum">
+                        总价:9999.00
+                    </div>
+                    <div class="del"><a href="#">删除</a></div>
+                </li> -->
+            </ul>
+            <div class="sumprice">一共：</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="center">
+            <div class="kouhao">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i></i> 百强企业&nbsp;品质保证
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i></i> 七天退货&nbsp;15天换货
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i></i> 48元起免运费
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i></i> 1000家维修网点&nbsp;全国联保
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-footer">
+
+            </div>
+            <div class="bottom clear">
+                <div class="logo">
+                    <a href="#"><img src="../img/footerlogo.png" alt=""></a>
+                </div>
+                <div class="list">
+                    <ul class="clear">
+                        <li><a href="#">华为集团</a></li>
+                        <li><a href="#">华为CBG官网</a></li>
+                        <li><a href="#">荣耀官网</a></li>
+                        <li><a href="#">花粉俱乐部</a></li>
+                        <li><a href="#">华为应用市场</a></li>
+                        <li><a href="#">EMUI</a></li>
+                        <li><a href="#">华为终端云空间</a></li>
+                        <li><a href="#">开发者联盟</a></li>
+                        <li><a href="#">华为商城手机版</a></li>
+                        <li><a href="#">网站地图</a></li>
+                    </ul>
+                    <div class="beian">
+                        <span> <a href="#">隐私声明</a></span>
+                        <span> <a href="#">服务协议</a></span>
+                        <span><a href="#">COOKIES</a></span>
+                        <span>Copyright © 2012-2019 华为终端有限公司 版权所有</span>
+                        <span><a href="#">粤ICP备19015064号-4</a></span>
+                        <em>|</em>
+                        <span><a href="#">粤公网安备 44190002003939号</a></span>
+                        <em>|</em>
+                        <span>备案主体编号：44201919072182</span>
+                    </div>
+
+                </div>
+                <div class="pic">
+                    <a href="#"><img src="../img/renzheng1.jpg" alt=""></a>
+                    <a href="#"><img src="../img/renzheng2.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

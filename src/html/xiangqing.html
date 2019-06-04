@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/xiangqing.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/cookie.js"></script>
+    <script src="../js/denglu.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="center clear">
+            <div class="top clear">
+                <ul class="left clear">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">华为商城</a></li>
+                    <li><a href="#">荣耀官网</a></li>
+                    <li><a href="#">花粉俱乐部</a></li>
+                    <li><a href="#">V码(优购码)</a></li>
+                    <li><a href="#">企业购</a></li>
+                    <li><a href="#">Select Region</a></li>
+                    <li>
+                        <a href="#">更多精彩</a>
+                        <ul class="erji gengduo">
+                            <li><a href="#">EMUI</a></li>
+                            <li><a href="#">应用市场</a></li>
+                            <li><a href="#">华为终端云空间</a></li>
+                            <li><a href="#">开发者联盟</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="right clear">
+                    <li><a id="denglu" href="../html/login.html">请登录</a>&nbsp;&nbsp;<a href="../html/zhuce.html">注册</a></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li>
+                        <a href="#">客户服务</a>
+                        <ul class="erji service">
+                            <li><a href="#">服务中心</a></li>
+                            <li><a href="#">联系客服</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">网站导航</a>
+                        <div class="erji sitemap">
+                            <dl>
+                                <dt>频道</dt>
+                                <dd><a href="#">华为专区</a></dd>
+                                <dd><a href="#">企业购</a></dd>
+                                <dd><a href="#">荣耀</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>产品</dt>
+                                <dd><a href="#">手机</a></dd>
+                                <dd><a href="#">平板&笔记本</a></dd>
+                                <dd><a href="#">智能穿戴</a></dd>
+                                <dd><a href="#">智能家居</a></dd>
+                                <dd><a href="#">通用配件</a></dd>
+                                <dd><a href="#">专属配件</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>增值服务</dt>
+                                <dd><a href="#">以旧换新</a></dd>
+                                <dd><a href="#">补够保障</a></dd>
+                                <dd><a href="#">礼品包装</a></dd>
+                                <dd><a href="#">一口价换电池</a></dd>
+                            </dl>
+                            <dl>
+                                <dt>会员</dt>
+                                <dd><a href="#">会员频道</a></dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">手机版</a>
+                        <ul class="erji code">
+                            <li>
+                                <img src="../img/1.png" alt="">
+                                <div>
+                                    <h2>华为商城App</h2>
+                                    <p>
+                                        新人专享好礼<br> 最高50000积分
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../img/2.jpg" alt="">
+                                <div>
+                                    <h2>华为商城公众号</h2>
+                                    <p>
+                                        微信扫一扫
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="../img/3.jpg" alt="">
+                                <div>
+                                    <h2>
+                                        微信小程序
+                                    </h2>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="./shopcar.html">购物车(<span id="shop-num">0</span>)</a></li>
+                </ul>
+            </div>
+            <div class="nav clear">
+                <div class="center clear">
+                    <div class="left clear">
+                        <div class="logo">
+                            <a href="#"><img src="../img/logo.png" alt="logo" title="logo"></a>
+                        </div>
+                        <ul class="list">
+                            <li class="img">
+                                <a href="#"><img src="../img/huawei.png" alt=""></a>
+                            </li>
+                            <li class="img">
+                                <a href="#"><img src="../img/rongyao.png" alt=""></a>
+                            </li>
+                            <li class=""><a href="#">华为P30</a></li>
+                            <li><a href="#">荣耀20</a></li>
+                            <li><a href="#">粉丝会员日</a></li>
+                            <li><a href="#">荣耀V20</a></li>
+                        </ul>
+                    </div>
+                    <div class="right clear">
+                        <div class="search">
+                            <input type="text" name="search" id="search" placeholder="HUAWEI P30  荣耀20">
+                            <button class="iconfont icon-sousuo"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="neirong">
+        <div class="center">
+            <div class="box">
+                <!-- <div class="small">
+                    <img src="../img/xiangqing1.jpg" alt="" class="smallpic">
+                    <div class="movebox"></div>
+                </div>
+                <div class="big">
+                    <img src="../img/xiangqing1.jpg" alt="" class="bigpic">
+                </div> -->
+            </div>
+            <div class="jianjie">
+                <!-- <div class="title">
+                    <span>荣耀V20 麒麟980 魅眼全视屏 4800万AI超清摄影 全网通6GB+128GB 标配版 幻影红</span>
+                </div>
+                <div class="youhui"><span>【超级618】到手价：2399元！限时优惠 300元，先领券享叠加200元优惠，下单再减100元，历史新低，限时抢购！活动时间：6月1日—6月2日 麒麟980处理器|4800万像素摄像头|4000mAh大容量电池|超级快充</span></div>
+                <div class="pricebox">
+                    <dl class="price"><dt>价格</dt>
+                        <dd>￥<span>2688</span></dd>
+                    </dl>
+                    <dl class="jianjia"><dt>优惠券</dt>
+                        <dd><span>满1000减200</span><a href="#">立即领取&gt;</a></dd>
+                    </dl>
+                    <dl class="chuxiao">
+                        <dt>促销</dt>
+                        <dd><span>限时特价</span><span>限时直降300元</span></dd>
+                        <dd><span>下单立减</span><span>下单立减100元</span></dd>
+                        <dd><span>整点赠送</span><span>10/12/14/16/20点下单前500赠AM115耳机（荣耀指定手机共享）</span></dd>
+                    </dl>
+                </div>
+                <div class="btnbox">
+                    <input type="number" value="1" min="1" max="5" id="num">
+                    <button class="shopcar">加入购物车</button>
+                    <button class="buy">立即购买</button>
+
+                </div> -->
+
+            </div>
+
+        </div>
+        <div class="xiangqing">
+            <!-- <h2>商品详情</h2>
+            <img src="../img/jieshao1.jpg" alt="">
+            <img src="../img/jieshao3.jpg" alt="">
+            <img src="../img/jieshao.jpg" alt="">
+            <img src="../img/jieshao2.jpg" alt="">
+            <img src="../img/jieshao5.jpg" alt=""> -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="center">
+            <div class="kouhao">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i></i> 百强企业&nbsp;品质保证
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i></i> 七天退货&nbsp;15天换货
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i></i> 48元起免运费
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i></i> 1000家维修网点&nbsp;全国联保
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="service-footer">
+
+            </div>
+            <div class="bottom clear">
+                <div class="logo">
+                    <a href="#"><img src="../img/footerlogo.png" alt=""></a>
+                </div>
+                <div class="list">
+                    <ul class="clear">
+                        <li><a href="#">华为集团</a></li>
+                        <li><a href="#">华为CBG官网</a></li>
+                        <li><a href="#">荣耀官网</a></li>
+                        <li><a href="#">花粉俱乐部</a></li>
+                        <li><a href="#">华为应用市场</a></li>
+                        <li><a href="#">EMUI</a></li>
+                        <li><a href="#">华为终端云空间</a></li>
+                        <li><a href="#">开发者联盟</a></li>
+                        <li><a href="#">华为商城手机版</a></li>
+                        <li><a href="#">网站地图</a></li>
+                    </ul>
+                    <div class="beian">
+                        <span> <a href="#">隐私声明</a></span>
+                        <span> <a href="#">服务协议</a></span>
+                        <span><a href="#">COOKIES</a></span>
+                        <span>Copyright © 2012-2019 华为终端有限公司 版权所有</span>
+                        <span><a href="#">粤ICP备19015064号-4</a></span>
+                        <em>|</em>
+                        <span><a href="#">粤公网安备 44190002003939号</a></span>
+                        <em>|</em>
+                        <span>备案主体编号：44201919072182</span>
+                    </div>
+
+                </div>
+                <div class="pic">
+                    <a href="#"><img src="../img/renzheng1.jpg" alt=""></a>
+                    <a href="#"><img src="../img/renzheng2.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/EasyLazyload.min.js"></script>
+    <script>
+        $(function() {
+            var id = location.search.split("=")[1];
+            $.ajax({
+                type: "get",
+                url: "../lip/getxiangqing.php",
+                data: {
+                    id: id
+                },
+                dataType: "json",
+                success: function(response) {
+                    var xiangqing = $('.xiangqing')
+                    var box1 = $('.box');
+                    var jianjie = $('.jianjie');
+                    var pic = JSON.parse(response.img);
+                    var details = JSON.parse(response.details);
+                    var str1 = `
+                        <div class="small">
+                        <img src="${pic[1].src2}" alt="" class="smallpic">
+                        <div class="movebox"></div>
+                        </div>
+                        <div class="big">
+                        <img src="${pic[1].src2}" alt="" class="bigpic">
+                        </div>
+                        `;
+                    var str2 = `
+                    <div class="title">
+                        <span>${response.title}</span>
+                    </div>
+                    <div class="youhui"><span>【超级618】到手价：2399元！限时优惠 300元，先领券享叠加200元优惠，下单再减100元，历史新低，限时抢购！活动时间：6月1日—6月2日 麒麟980处理器|4800万像素摄像头|4000mAh大容量电池|超级快充</span></div>
+                    <div class="pricebox">
+                        <dl class="price"><dt>价格</dt>
+                        <dd>￥<span>${response.price}</span></dd>
+                    </dl>
+                    <dl class="jianjia"><dt>优惠券</dt>
+                        <dd><span>满1000减200</span><a href="#">立即领取&gt;</a></dd>
+                    </dl>
+                    <dl class="chuxiao">
+                        <dt>促销</dt>
+                        <dd><span>限时特价</span><span>限时直降300元</span></dd>
+                        <dd><span>下单立减</span><span>下单立减100元</span></dd>
+                        <dd><span>整点赠送</span><span>10/12/14/16/20点下单前500赠AM115耳机（荣耀指定手机共享）</span></dd>
+                    </dl>
+                </div>
+                <div class="btnbox">
+                    <input type="number" value="2" min="1" max="${response.num}" id="num">
+                    <button class="shopcar">加入购物车</button>
+                    <button class="buy">立即购买</button>
+                    `;
+                    var str3 = `
+                    <h2>商品详情</h2>
+                    <img src="${details[0].src1}" alt="">
+                    <img src="${details[1].src2}" alt="">
+                    <img src="${details[2].src3}" alt="">
+                    <img src="${details[3].src4}" alt="">
+                    <img src="${details[4].src5}" alt="">
+                    `;
+                    jianjie.append(str2).find(".shopcar").on("click", function() {
+                        addshopcar(response.id, response.price, $('#num').val());
+                        alert("成功加入购物车")
+                    })
+                    box1.append(str1)
+                    xiangqing.append(str3)
+                    var box = document.querySelector('.box');
+                    var small = document.querySelector('.small');
+                    var movebox = document.querySelector('.movebox');
+                    var big = document.querySelector('.big');
+                    var bigpic = document.querySelector('.bigpic');
+                    small.onmouseover = function() {
+                        big.classList.add('show');
+                        big.classList.remove('hidde');
+                        var movewidth = small.offsetWidth * big.offsetWidth / bigpic.offsetWidth + 'px';
+                        var movehight = small.offsetHeight * big.offsetHeight / bigpic.offsetHeight + 'px';
+                        movebox.style.width = movewidth;
+                        movebox.style.height = movehight;
+                        small.onmousemove = function(e) {
+                            e = e || event;
+                            var moveleft = e.pageX - box.offsetLeft - (movebox.offsetWidth / 2);
+                            var movetop = e.pageY - box.offsetTop - (movebox.offsetHeight / 2);
+                            if (moveleft <= 0) {
+                                moveleft = 0;
+                            } else if (moveleft > small.offsetWidth - movebox.offsetWidth) {
+                                moveleft = small.offsetWidth - movebox.offsetWidth;
+                            }
+                            if (movetop <= 0) {
+                                movetop = 0;
+                            } else if (movetop > small.offsetHeight - movebox.offsetHeight) {
+                                movetop = small.offsetHeight - movebox.offsetHeight;
+                            }
+                            var p = bigpic.offsetWidth / small.offsetWidth;
+                            movebox.style.left = moveleft + 'px';
+                            movebox.style.top = movetop + 'px';
+                            bigpic.style.left = -moveleft * p + 'px';
+                            bigpic.style.top = -movetop * p + 'px';
+
+                        }
+
+                    }
+                    small.onmouseout = function() {
+                        big.classList.add('hidde');
+                        big.classList.remove('show');
+
+                    }
+
+
+                },
+                complete: function() {
+                    lazyLoadInit({
+                        coverColor: "white",
+                        coverDiv: "<h1></h1>",
+                        offsetBottom: 150,
+                        offsetTopm: 150,
+                        showTime: 1100,
+                        onLoadBackEnd: function(i, e) {
+                            console.log("onLoadBackEnd:" + i);
+                        },
+                        onLoadBackStart: function(i, e) {
+                            console.log("onLoadBackStart:" + i);
+                        }
+                    });
+                },
+            });
+
+
+
+
+
+
+            function addshopcar(id, price, num) {
+                var shop = cookie.get("shop");
+                var shopnum = $('#shop-num')
+                var product = {
+                    "id": id,
+                    "price": price,
+                    "num": num
+                }
+                if (shop) {
+                    shop = JSON.parse(shop);
+                    console.log(shop.length);
+                    shopnum.html(shop.length)
+                    if (shop.some(elm => elm.id == id)) {
+                        shop.forEach(function(elm, i) {
+                            elm.id == id ? elm.num = num : null;
+                        });
+                    } else {
+                        shop.push(product);
+                    }
+                    cookie.set("shop", JSON.stringify(shop), 1);
+                } else {
+                    shop = [];
+                    shop.push(product);
+                    cookie.set("shop", JSON.stringify(shop), 1);
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>

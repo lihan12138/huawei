@@ -1,0 +1,176 @@
+@charset "UTF-8";
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: "微软雅黑"
+}
+.clear::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+li{
+    list-style: none
+}
+a{
+    text-decoration: none;
+}
+img{
+    border:none;
+    display: block;
+}
+.center{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    height: 60px;
+    background: #a51b1b;
+    overflow: hidden;
+    .logo{
+        a{
+            display: block;
+            margin: 10px 50px;
+            img{
+                height: 40px;
+            }
+        }
+    }
+}
+.login{
+    width: 700px;
+    margin:20px auto;
+    padding:30px;
+   // border:1px solid #a4a4a4;
+    box-shadow: 0 0 20px #a4a4a4;
+    .title{
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 60px;
+        span{
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+        em{
+            font-style: normal;
+            color:#ccc;
+        }
+    }
+    .zhanghao{
+        &>input{
+            display: block;
+            margin-bottom: 10px;
+            height: 46px;
+            width: 50%;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            color: #333;
+            font-size: 14px;
+            height: 46px;
+            line-height: 46px;
+            border-radius: 0;
+            outline: none;
+            margin: 20px auto;
+        }
+        .btn{outline: none;
+            display: block;
+            background-color: #b40707;
+            border:none;
+            color: #fff;
+            width: 50%;
+            line-height: 44px;
+            height: 44px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 26px;
+            text-align: center;
+            margin: 40px auto;
+        }
+        .jizhu{
+            width: 50%;
+            margin:0 auto;
+            input{
+                width: 18px;
+                height: 18px;
+                vertical-align: middle;
+            }
+            a{
+                float: right;
+                color:#007dff
+            }
+        }
+        .zhuce{
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+            a{
+                color:#007dff;
+            }
+            em{
+                color:#ccc;
+            }
+        }
+    }
+    .saoma{
+        display: none;
+    }
+    .other{
+        width: 50%;
+        margin:0 auto;
+        .title2{
+            text-align: center;
+            position: relative;
+            i{
+                background-repeat: no-repeat;
+                height: 1px;
+                position: absolute;
+                width: 94px;
+                background-size: cover;
+                top:50%;
+            }
+            .c1{
+                background-image: url(../img/thirdLine.png);
+                left:0;
+            }
+            .c2{
+                background-image: url(../img/thirdLine-reverse.png);
+                right:0;
+            }
+        }
+        .pic{
+            display: flex;
+            justify-content: space-between;
+            width: 70%;
+            margin: 10px auto;
+            span{
+                cursor: pointer;
+                width: 42px;
+                height: 42px;
+                display: inline-block;
+                background: url(../img/third_login.png) no-repeat;
+            }
+            .qq{&:hover{
+                background-position: -72px -55px
+            }
+                background-position:-72px -9px;
+            }
+            .zhifubao{
+                &:hover{
+                    background-position: -132px -55px
+                }   
+                    background-position: -132px -9px;
+            }
+            .weixin{
+                &:hover{
+                    background-position: -12px -55px;
+                }
+                background-position: -12px -9px;
+            }
+        }
+    }
+}

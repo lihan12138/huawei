@@ -1,0 +1,171 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "微软雅黑";
+}
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  border: none;
+  display: block;
+}
+.center {
+  width: 1200px;
+  margin: 0 auto;
+}
+header {
+  height: 60px;
+  background: #a51b1b;
+  overflow: hidden;
+}
+header .logo a {
+  display: block;
+  margin: 10px 50px;
+}
+header .logo a img {
+  height: 40px;
+}
+.login {
+  width: 700px;
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 0 0 20px #a4a4a4;
+}
+.login .title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+.login .title span {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+}
+.login .title em {
+  font-style: normal;
+  color: #ccc;
+}
+.login .zhanghao > input {
+  display: block;
+  margin-bottom: 10px;
+  width: 50%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  font-size: 14px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 0;
+  outline: none;
+  margin: 20px auto;
+}
+.login .zhanghao .btn {
+  outline: none;
+  display: block;
+  background-color: #b40707;
+  border: none;
+  color: #fff;
+  width: 50%;
+  line-height: 44px;
+  height: 44px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 26px;
+  text-align: center;
+  margin: 40px auto;
+}
+.login .zhanghao .jizhu {
+  width: 50%;
+  margin: 0 auto;
+}
+.login .zhanghao .jizhu input {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+.login .zhanghao .jizhu a {
+  float: right;
+  color: #007dff;
+}
+.login .zhanghao .zhuce {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}
+.login .zhanghao .zhuce a {
+  color: #007dff;
+}
+.login .zhanghao .zhuce em {
+  color: #ccc;
+}
+.login .saoma {
+  display: none;
+}
+.login .other {
+  width: 50%;
+  margin: 0 auto;
+}
+.login .other .title2 {
+  text-align: center;
+  position: relative;
+}
+.login .other .title2 i {
+  background-repeat: no-repeat;
+  height: 1px;
+  position: absolute;
+  width: 94px;
+  background-size: cover;
+  top: 50%;
+}
+.login .other .title2 .c1 {
+  background-image: url(../img/thirdLine.png);
+  left: 0;
+}
+.login .other .title2 .c2 {
+  background-image: url(../img/thirdLine-reverse.png);
+  right: 0;
+}
+.login .other .pic {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 10px auto;
+}
+.login .other .pic span {
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  display: inline-block;
+  background: url(../img/third_login.png) no-repeat;
+}
+.login .other .pic .qq {
+  background-position: -72px -9px;
+}
+.login .other .pic .qq:hover {
+  background-position: -72px -55px;
+}
+.login .other .pic .zhifubao {
+  background-position: -132px -9px;
+}
+.login .other .pic .zhifubao:hover {
+  background-position: -132px -55px;
+}
+.login .other .pic .weixin {
+  background-position: -12px -9px;
+}
+.login .other .pic .weixin:hover {
+  background-position: -12px -55px;
+}
